@@ -28,7 +28,8 @@
 
 ## 快速开始
 
-### Windows 便携版
+### 1. Windows 便携版直接运行
+- 操作系统：Windows 10 / 11
 
 下载 release 中的便携包，解压后运行：
 
@@ -41,7 +42,9 @@ SplitHuaweiLivePhotoTool.exe
 - Windows x64 GUI 程序
 - SHA256 校验文件
 
-### 源码运行
+### 2. 源码运行
+- 运行依赖：Python 3.10+
+- 核心组件：`PyQt6`、`PyQt6-Fluent-Widgets`
 
 ```powershell
 python -m venv .venv
@@ -92,7 +95,7 @@ python split_huawei_live_photo.py .\sample\HarmonyOS4\Source .\sample\HarmonyOS4
 dist\SplitHuaweiLivePhotoTool.exe
 ```
 
-## 项目结构
+## 项目结构与配置
 
 - `split_huawei_live_photo.py`：命令行与核心分离逻辑。
 - `split_huawei_live_photo_gui.py`：PyQt6 / Fluent GUI。
