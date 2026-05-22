@@ -7,10 +7,10 @@ TRANSLATIONS = {
         "app_title": "华为LivePhoto批量分离工具",
         "header_title": "华为LivePhoto批量分离工具",
         "header_subtitle": "批量分离华为 Live Photo 中的静态照片与动态视频。",
-        "header_note": "支持内嵌式 JPG Live Photo，也支持华为云下载后的同名 JPG + MP4 独立文件整理。",
+        "header_note": "支持华为相机拍摄或华为云下载的单个 LivePhoto JPG 文件分离。",
         "language": "界面语言",
         "source_dir": "源文件夹",
-        "source_placeholder": "选择包含华为 Live Photo JPG 或同名 JPG/MP4 的源文件夹",
+        "source_placeholder": "选择包含华为 LivePhoto JPG 文件的源文件夹",
         "choose_source": "选择源目录",
         "output_dir": "输出目录",
         "output_placeholder": "选择分离输出目录",
@@ -21,7 +21,7 @@ TRANSLATIONS = {
         "video_exists": "视频目标已存在时",
         "skip": "跳过",
         "overwrite": "覆盖",
-        "drop_hint": "可将 JPG/JPEG 文件或文件夹拖入列表；同名 MP4 会被识别为华为云独立素材。",
+        "drop_hint": "可将 JPG/JPEG 文件或文件夹拖入列表；华为 LivePhoto JPG 会被分离为 JPG 和 MP4。",
         "table_image": "图片相对路径",
         "table_type": "类型",
         "table_video": "匹配到视频",
@@ -30,19 +30,19 @@ TRANSLATIONS = {
         "clear_list": "清空列表",
         "start_split": "开始批量分离",
         "waiting_source": "等待选择源目录",
-        "dialog_choose_source": "选择包含华为 Live Photo 或同名 JPG/MP4 的源文件夹",
+        "dialog_choose_source": "选择包含华为 LivePhoto JPG 文件的源文件夹",
         "dialog_choose_output": "选择分离输出目录",
         "yes": "是",
         "no": "否",
         "type_embedded": "内嵌 Live Photo",
-        "type_cloud_pair": "华为云独立文件",
+        "type_cloud_pair": "同名 JPG/MP4 文件",
         "type_static": "普通照片",
         "status_pending": "等待处理",
         "status_skip_static": "跳过：普通照片",
         "status_photo_exists": "跳过：照片已存在",
         "status_video_exists": "跳过：视频已存在",
         "status_splitting": "正在分离...",
-        "status_pair_copying": "正在整理独立文件...",
+        "status_pair_copying": "正在整理同名文件...",
         "status_split_success": "分离成功",
         "status_pair_success": "整理成功",
         "status_failed": "失败: {error}",
@@ -65,12 +65,12 @@ TRANSLATIONS = {
         "same_dir_warning": "输入与输出目录相同，分离结果可能会覆盖原文件。\n\n是否继续？",
         "preparing": "准备开始处理...",
         "progress": "进度: {i}/{total}",
-        "task_done_status": "任务结束：内嵌分离 {embedded}，独立整理 {pairs}",
+        "task_done_status": "任务结束：LivePhoto 分离 {embedded}，同名文件整理 {pairs}",
         "task_done_title": "处理完成",
         "task_done_message": (
             "任务结束，统计如下：\n\n"
             "内嵌 Live Photo 分离成功: {embedded_success}\n"
-            "华为云独立文件整理成功: {pair_success}\n"
+            "同名 JPG/MP4 文件整理成功: {pair_success}\n"
             "因目标已存在跳过: {exists_skip}\n"
             "普通照片跳过: {static_skip}\n"
             "失败: {failed}\n\n"
@@ -82,10 +82,10 @@ TRANSLATIONS = {
         "app_title": "Huawei LivePhoto Batch Split Tool",
         "header_title": "Huawei LivePhoto Batch Split Tool",
         "header_subtitle": "Batch split static photos and motion videos from Huawei Live Photos.",
-        "header_note": "Supports embedded JPG Live Photos and cloud-downloaded JPG + MP4 pairs.",
+        "header_note": "Supports splitting single LivePhoto JPG files captured by Huawei cameras or downloaded from Huawei Cloud.",
         "language": "Language",
         "source_dir": "Source folder",
-        "source_placeholder": "Choose a folder containing Huawei Live Photo JPGs or JPG/MP4 pairs",
+        "source_placeholder": "Choose a folder containing Huawei LivePhoto JPG files",
         "choose_source": "Choose source",
         "output_dir": "Output folder",
         "output_placeholder": "Choose split output folder",
@@ -96,7 +96,7 @@ TRANSLATIONS = {
         "video_exists": "When video target exists",
         "skip": "Skip",
         "overwrite": "Overwrite",
-        "drop_hint": "Drag JPG/JPEG files or folders here. Matching MP4 files are treated as Huawei Cloud pairs.",
+        "drop_hint": "Drag JPG/JPEG files or folders here. Huawei LivePhoto JPG files are split into JPG and MP4.",
         "table_image": "Image path",
         "table_type": "Type",
         "table_video": "Matched video",
@@ -105,19 +105,19 @@ TRANSLATIONS = {
         "clear_list": "Clear list",
         "start_split": "Start batch split",
         "waiting_source": "Waiting for source folder",
-        "dialog_choose_source": "Choose a folder with Huawei Live Photos or JPG/MP4 pairs",
+        "dialog_choose_source": "Choose a folder with Huawei LivePhoto JPG files",
         "dialog_choose_output": "Choose split output folder",
         "yes": "Yes",
         "no": "No",
         "type_embedded": "Embedded Live Photo",
-        "type_cloud_pair": "Huawei Cloud pair",
+        "type_cloud_pair": "Matching JPG/MP4 files",
         "type_static": "Static photo",
         "status_pending": "Pending",
         "status_skip_static": "Skipped: static photo",
         "status_photo_exists": "Skipped: photo exists",
         "status_video_exists": "Skipped: video exists",
         "status_splitting": "Splitting...",
-        "status_pair_copying": "Organizing pair...",
+        "status_pair_copying": "Organizing matching files...",
         "status_split_success": "Split succeeded",
         "status_pair_success": "Pair organized",
         "status_failed": "Failed: {error}",
@@ -140,12 +140,12 @@ TRANSLATIONS = {
         "same_dir_warning": "Input and output folders are the same. Split results may overwrite originals.\n\nContinue?",
         "preparing": "Preparing...",
         "progress": "Progress: {i}/{total}",
-        "task_done_status": "Task finished: embedded {embedded}, pairs {pairs}",
+        "task_done_status": "Task finished: LivePhotos {embedded}, matching files {pairs}",
         "task_done_title": "Processing complete",
         "task_done_message": (
             "Task finished. Summary:\n\n"
             "Embedded Live Photos split: {embedded_success}\n"
-            "Huawei Cloud pairs organized: {pair_success}\n"
+            "Matching JPG/MP4 files organized: {pair_success}\n"
             "Skipped because target exists: {exists_skip}\n"
             "Static photos skipped: {static_skip}\n"
             "Failed: {failed}\n\n"

@@ -2,16 +2,16 @@
 
 简体中文 | [English](docs/README.en.md)
 
-该项目用于将华为相机拍摄的 LivePhoto 批量分离为静态照片与动态视频文件。分离后的 `JPG + MP4` 可用于后续重新合成为 Motion Photo 标准格式，以便在 Windows Photos、Google Photos 等相册应用中正常播放动态照片。
+该项目用于将华为相机拍摄或华为云下载的 LivePhoto 单个 JPG 文件批量分离为静态照片与动态视频文件。分离后的 `JPG + MP4` 可用于后续重新合成为 Motion Photo 标准格式，以便在 Windows Photos、Google Photos 等相册应用中正常播放动态照片。
 
 项目基于 `PyQt6` 与 `PyQt6-Fluent-Widgets` 构建 Windows 11 风格 GUI，界面风格尽量与同仓库的 `merge_live_photo_gui.py` 保持一致。
 
 ## 核心特性
 
 - **批量扫描**：支持扫描当前目录或所有子目录。
-- **自动识别**：自动区分内嵌 LivePhoto、华为云同名 JPG/MP4 独立文件、普通静态照片。
+- **自动识别**：自动区分华为 LivePhoto JPG、普通静态照片，以及已存在的同名 JPG/MP4 文件。
 - **批量分离**：内嵌 LivePhoto 会被拆分为同名 `.jpg` 与 `.mp4`。
-- **独立文件整理**：华为云下载后的同名 JPG/MP4 会被复制到统一输出目录并保留目录层级。
+- **文件整理**：已存在的同名 JPG/MP4 文件可复制到统一输出目录并保留目录层级。
 - **冲突策略**：照片和视频目标已存在时可分别选择跳过或覆盖。
 - **中英文切换**：GUI 文案已分离到 `split_huawei_live_photo_translations.py`。
 - **配置记忆**：语言、输入输出目录、扫描规则、冲突策略会保存到本地配置。
@@ -22,9 +22,9 @@
 | --- | --- | --- | --- | --- |
 | HarmonyOS | HUAWEI Mate 20 | HMA-AL00 | HarmonyOS 4.0.0.121 | 本机 LivePhoto JPG 文件 |
 | HarmonyOS | HUAWEI nova 5z | SPN-AL00 | HarmonyOS 2.0.0.165 | 本机 LivePhoto JPG 文件 |
-| HarmonyOS NEXT | HUAWEI nova 14 Ultra | MRT-AL10 | HarmonyOS 5 / 6 | 华为云或系统接口导出的独立 JPG/MP4 文件 |
+| HarmonyOS NEXT | HUAWEI nova 14 Ultra | MRT-AL10 | HarmonyOS 5 / 6 | 华为云下载的单个 LivePhoto JPG 文件 |
 
-> HarmonyOS 5 / 6 拍摄后通过华为云服务下载得到的独立照片与视频文件，也按同名 JPG/MP4 规则支持分离整理。
+> HarmonyOS 5 / 6 拍摄后通过华为云服务下载得到的单个 LivePhoto JPG 文件，也支持分离为 JPG 和 MP4。
 
 ## 快速开始
 
@@ -63,7 +63,7 @@ python split_huawei_live_photo.py .\sample\HarmonyOS4\Source .\sample\HarmonyOS4
 ## 使用说明
 
 1. 启动 `SplitHuaweiLivePhotoTool.exe` 或运行 `python split_huawei_live_photo_gui.py`。
-2. 选择源文件夹。源文件夹可以包含内嵌华为 LivePhoto JPG，也可以包含华为云下载后的同名 JPG/MP4。
+2. 选择源文件夹。源文件夹可以包含华为相机拍摄或华为云下载的单个 LivePhoto JPG 文件。
 3. 确认输出目录，按需选择是否扫描子目录。
 4. 设置目标文件已存在时的处理策略。
 5. 点击 **开始批量分离**。
@@ -125,7 +125,7 @@ Huawei LivePhoto Batch Split Tool
 推荐项目描述：
 
 ```text
-批量分离华为与 HarmonyOS LivePhoto，支持内嵌 JPG LivePhoto 以及华为云下载后的同名 JPG/MP4 独立文件。
+批量分离华为与 HarmonyOS LivePhoto 单个 JPG 文件，输出独立 JPG 和 MP4 文件。
 ```
 
 推荐 release 标题：
@@ -145,7 +145,7 @@ Changes:
     Support Chinese and English UI switching
     Refactor UI translations into a separate module
     Split embedded Huawei / HarmonyOS LivePhoto JPG files
-    Organize Huawei Cloud downloaded JPG/MP4 pairs
+    Split Huawei Cloud downloaded single LivePhoto JPG files
 
 Assets:
 

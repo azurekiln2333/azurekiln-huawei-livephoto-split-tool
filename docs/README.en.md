@@ -2,16 +2,16 @@
 
 [简体中文](../README.md) | English
 
-This project batch-splits Huawei camera LivePhoto files into standalone static photos and motion videos. The split `JPG + MP4` files can later be merged into the Motion Photo standard for playback in Windows Photos, Google Photos, and similar gallery applications.
+This project batch-splits single Huawei camera or Huawei Cloud downloaded LivePhoto JPG files into standalone static photos and motion videos. The split `JPG + MP4` files can later be merged into the Motion Photo standard for playback in Windows Photos, Google Photos, and similar gallery applications.
 
 The GUI is built with `PyQt6` and `PyQt6-Fluent-Widgets`, following a Windows 11 style and staying visually consistent with `merge_live_photo_gui.py` in this repository.
 
 ## Features
 
 - **Batch scanning**: Scan the selected folder or all subfolders.
-- **Automatic detection**: Detect embedded LivePhoto files, Huawei Cloud downloaded JPG/MP4 pairs, and ordinary static photos.
+- **Automatic detection**: Detect Huawei LivePhoto JPG files, ordinary static photos, and existing matching JPG/MP4 files.
 - **Batch splitting**: Split embedded LivePhoto JPG files into matching `.jpg` and `.mp4` files.
-- **Pair organization**: Copy Huawei Cloud downloaded JPG/MP4 pairs into one output folder while preserving folder structure.
+- **File organization**: Copy existing matching JPG/MP4 files into one output folder while preserving folder structure.
 - **Conflict handling**: Choose skip or overwrite separately for existing photo and video targets.
 - **Chinese / English UI**: GUI strings are separated into `split_huawei_live_photo_translations.py`.
 - **Persistent settings**: Language, input/output folders, scan mode, and conflict rules are saved locally.
@@ -22,9 +22,9 @@ The GUI is built with `PyQt6` and `PyQt6-Fluent-Widgets`, following a Windows 11
 | --- | --- | --- | --- | --- |
 | HarmonyOS | HUAWEI Mate 20 | HMA-AL00 | HarmonyOS 4.0.0.121 | Native LivePhoto JPG file |
 | HarmonyOS | HUAWEI nova 5z | SPN-AL00 | HarmonyOS 2.0.0.165 | Native LivePhoto JPG file |
-| HarmonyOS NEXT | HUAWEI nova 14 Ultra | MRT-AL10 | HarmonyOS 5 / 6 | Standalone JPG/MP4 files exported by Huawei Cloud or system APIs |
+| HarmonyOS NEXT | HUAWEI nova 14 Ultra | MRT-AL10 | HarmonyOS 5 / 6 | Single LivePhoto JPG file downloaded from Huawei Cloud |
 
-> Standalone photo and video files downloaded from Huawei Cloud for HarmonyOS 5 / 6 captures are supported when they follow the matching JPG/MP4 filename rule.
+> Single LivePhoto JPG files downloaded from Huawei Cloud for HarmonyOS 5 / 6 captures can be split into standalone JPG and MP4 files.
 
 ## Quick Start
 
@@ -63,7 +63,7 @@ python split_huawei_live_photo.py .\sample\HarmonyOS4\Source .\sample\HarmonyOS4
 ## Usage
 
 1. Start `SplitHuaweiLivePhotoTool.exe` or run `python split_huawei_live_photo_gui.py`.
-2. Choose the source folder. It can contain embedded Huawei LivePhoto JPG files or Huawei Cloud downloaded JPG/MP4 pairs.
+2. Choose the source folder. It can contain single Huawei LivePhoto JPG files captured by the camera or downloaded from Huawei Cloud.
 3. Confirm the output folder and choose whether to scan subfolders.
 4. Set conflict rules for existing target files.
 5. Click **Start batch split**.
@@ -125,7 +125,7 @@ Huawei LivePhoto Batch Split Tool
 Recommended project description:
 
 ```text
-Batch split Huawei and HarmonyOS LivePhoto files, with support for embedded JPG LivePhoto files and Huawei Cloud downloaded JPG/MP4 pairs.
+Batch split single Huawei and HarmonyOS LivePhoto JPG files into standalone JPG and MP4 files.
 ```
 
 Recommended release title:
@@ -145,7 +145,7 @@ Changes:
     Support Chinese and English UI switching
     Refactor UI translations into a separate module
     Split embedded Huawei / HarmonyOS LivePhoto JPG files
-    Organize Huawei Cloud downloaded JPG/MP4 pairs
+    Split Huawei Cloud downloaded single LivePhoto JPG files
 
 Assets:
 
