@@ -323,7 +323,7 @@ class ProcessWorker(QObject):
 class MainWindow(FramelessMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Huawei Live Photo Split")
+        self.setWindowTitle("华为LivePhoto批量分离工具")
         self.resize(1280, 820)
         self._title_bar_height = 36
         self._set_blue_title_bar()

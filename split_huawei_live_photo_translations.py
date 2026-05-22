@@ -4,8 +4,8 @@ DEFAULT_LANGUAGE = "zh"
 
 TRANSLATIONS = {
     "zh": {
-        "app_title": "Huawei Live Photo Split",
-        "header_title": "华为 / 鸿蒙 Live Photo 批量分离",
+        "app_title": "华为LivePhoto批量分离工具",
+        "header_title": "华为LivePhoto批量分离工具",
         "header_subtitle": "批量分离华为 Live Photo 中的静态照片与动态视频。",
         "header_note": "支持内嵌式 JPG Live Photo，也支持华为云下载后的同名 JPG + MP4 独立文件整理。",
         "language": "界面语言",
@@ -79,8 +79,8 @@ TRANSLATIONS = {
         "process_done_notice": "成功处理 {count} 项",
     },
     "en": {
-        "app_title": "Huawei Live Photo Split",
-        "header_title": "Huawei / HarmonyOS Live Photo Batch Split",
+        "app_title": "Huawei LivePhoto Batch Split Tool",
+        "header_title": "Huawei LivePhoto Batch Split Tool",
         "header_subtitle": "Batch split static photos and motion videos from Huawei Live Photos.",
         "header_note": "Supports embedded JPG Live Photos and cloud-downloaded JPG + MP4 pairs.",
         "language": "Language",
