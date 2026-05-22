@@ -1,6 +1,6 @@
 # Huawei LivePhoto Batch Split Tool
 
-[简体中文](../README.md) | English
+[简体中文](../README.md) | [繁體中文](README.zh-TW.md) | English
 
 This project batch-splits single Huawei camera or Huawei Cloud downloaded LivePhoto JPG files into standalone static photos and motion videos. The split `JPG + MP4` files can later be merged into the Motion Photo standard for playback in Windows Photos, Google Photos, and similar gallery applications.
 

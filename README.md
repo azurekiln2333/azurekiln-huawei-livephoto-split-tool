@@ -1,6 +1,6 @@
 # 华为LivePhoto批量分离工具
 
-简体中文 | [English](docs/README.en.md)
+简体中文 | [繁體中文](docs/README.zh-TW.md) | [English](docs/README.en.md)
 
 该项目用于将华为相机拍摄或华为云下载的 LivePhoto 单个 JPG 文件批量分离为静态照片与动态视频文件。分离后的 `JPG + MP4` 可用于后续重新合成为 Motion Photo 标准格式，以便在 Windows Photos、Google Photos 等相册应用中正常播放动态照片。
 
