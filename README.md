@@ -39,7 +39,6 @@ SplitHuaweiLivePhotoTool.exe
 便携包包含：
 
 - Windows x64 GUI 程序
-- Bundled ExifTool
 - SHA256 校验文件
 
 ### 源码运行
@@ -150,7 +149,6 @@ Changes:
 Assets:
 
     Windows x64 portable build
-    Bundled ExifTool
     SHA256 checksum file included
 ```
 

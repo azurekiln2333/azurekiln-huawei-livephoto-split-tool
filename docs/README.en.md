@@ -39,7 +39,6 @@ SplitHuaweiLivePhotoTool.exe
 The portable package includes:
 
 - Windows x64 GUI application
-- Bundled ExifTool
 - SHA256 checksum file
 
 ### Run from Source
@@ -150,7 +149,6 @@ Changes:
 Assets:
 
     Windows x64 portable build
-    Bundled ExifTool
     SHA256 checksum file included
 ```
 
