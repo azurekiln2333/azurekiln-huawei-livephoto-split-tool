@@ -28,9 +28,26 @@ The GUI is built with `PyQt6` and `PyQt6-Fluent-Widgets`, following a Windows 11
 
 ## Quick Start
 
-### Windows Portable Build
+### 1. Run the Windows Portable Build Directly
 
-Download the release package, extract it, and run:
+- Operating system: Windows 10 / 11
+- Runtime: no Python installation required
+
+Download both release assets:
+
+```text
+SplitHuaweiLivePhotoTool-1.0.0-20260523-windows-x64-portable.zip
+SplitHuaweiLivePhotoTool-1.0.0-20260523-windows-x64-portable.sha256.txt
+```
+
+Optional: verify SHA256 before extracting:
+
+```powershell
+Get-FileHash .\SplitHuaweiLivePhotoTool-1.0.0-20260523-windows-x64-portable.zip -Algorithm SHA256
+Get-Content .\SplitHuaweiLivePhotoTool-1.0.0-20260523-windows-x64-portable.sha256.txt
+```
+
+Extract the portable package and run:
 
 ```text
 SplitHuaweiLivePhotoTool.exe
@@ -39,15 +56,18 @@ SplitHuaweiLivePhotoTool.exe
 The portable package includes:
 
 - Windows x64 GUI application
-- SHA256 checksum file
+- Simplified Chinese, Traditional Chinese, and English documentation
 
-### Run from Source
+### 2. Run from Source
+
+- Runtime dependency: Python 3.10+
+- Core packages: `PyQt6`, `PyQt6-Fluent-Widgets`, `PyQt6-Frameless-Window`, `Pillow`
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\activate
 
-pip install PyQt6 PyQt6-Fluent-Widgets PyQt6-Frameless-Window Pillow pyinstaller
+pip install PyQt6 PyQt6-Fluent-Widgets PyQt6-Frameless-Window Pillow
 
 python split_huawei_live_photo_gui.py
 ```

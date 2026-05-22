@@ -28,26 +28,46 @@
 
 ## 快速開始
 
-### Windows 便攜版
+### 1. Windows 便攜版直接執行
 
-下載 release 中的便攜包，解壓後執行：
+- 作業系統：Windows 10 / 11
+- 執行環境：無需安裝 Python
+
+從 release 下載以下兩個檔案：
+
+```text
+SplitHuaweiLivePhotoTool-1.0.0-20260523-windows-x64-portable.zip
+SplitHuaweiLivePhotoTool-1.0.0-20260523-windows-x64-portable.sha256.txt
+```
+
+可選：解壓前校驗 SHA256：
+
+```powershell
+Get-FileHash .\SplitHuaweiLivePhotoTool-1.0.0-20260523-windows-x64-portable.zip -Algorithm SHA256
+Get-Content .\SplitHuaweiLivePhotoTool-1.0.0-20260523-windows-x64-portable.sha256.txt
+```
+
+解壓便攜包後執行：
 
 ```text
 SplitHuaweiLivePhotoTool.exe
 ```
 
-便攜包包含：
+便攜包內包含：
 
 - Windows x64 GUI 程式
-- SHA256 校驗檔案
+- 简体中文、繁體中文、English 文件說明
 
-### 原始碼執行
+### 2. 原始碼執行
+
+- 執行依賴：Python 3.10+
+- 核心元件：`PyQt6`、`PyQt6-Fluent-Widgets`、`PyQt6-Frameless-Window`、`Pillow`
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\activate
 
-pip install PyQt6 PyQt6-Fluent-Widgets PyQt6-Frameless-Window Pillow pyinstaller
+pip install PyQt6 PyQt6-Fluent-Widgets PyQt6-Frameless-Window Pillow
 
 python split_huawei_live_photo_gui.py
 ```
